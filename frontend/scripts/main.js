@@ -1,5 +1,5 @@
 //importações
-import { gerarSala, entrarSala } from "./api.js";
+import { gerarSala } from "./api.js";
 
 
 //varivaeis importantes
