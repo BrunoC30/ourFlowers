@@ -5,8 +5,8 @@ import { gerarSala } from "./api.js";
 //varivaeis importantes
 let key =""
 let roomID = ""
-const BASE_URL = process.env.URL
-const socket = io(process.env.URL);
+const BASE_URL = "https://ourflowers.onrender.com"
+const socket = io("https://ourflowers.onrender.com");
 let fisrtUser = true;
 
 const params = new URLSearchParams(window.location.search);
