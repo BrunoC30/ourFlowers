@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="style/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ourflowers</title>
+</head>
+<body>
+    <header>
+        <h1>OurFlowers</h1>
+    </header>
+    <main>
+        <div class="flowerContainer">
+            <span id="surprise">Te amo</span>
+            <img src="style/imgs/rose.png" id="flower" alt="">
+        </div>
+        <button id="qrose">Qrose</button>
+    </main>
+
+    <section id="qrcode" class="hide">
+       <div class="qrContainer">
+        <button id="exit">X</button>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;" alt="" id="code">
+       </div>
+    </section>
+
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+<script src="scripts/socket.js"></script>
+<script src="scripts/main.js" type="module"></script>
+</body>
+</html>
