@@ -82,7 +82,8 @@ function trocarFlor(){
 function animarRosa() {
 
   flower.classList.remove("rose-animate");
-  void flower.offsetWidth; // força reflow (hack mágico)
+  flower.classList.remove("encolher");
+  void flower.offsetWidth; // força reflow
 
   flower.classList.add("rose-animate");
 }
@@ -90,6 +91,8 @@ function animarRosa() {
 function apertar(){
 
     flower.classList.remove("encolher");
+    flower.classList.remove("rose-animate");
+
     void flower.offsetWidth;
     flower.classList.add("encolher");
 }
