@@ -13,7 +13,7 @@ function setupSocketEvents(io) {
             k: key,
             users: []
         }
-        
+        console.log("todas as rooms: ", rooms);
     })
 
     //!!!! entrar na sala
