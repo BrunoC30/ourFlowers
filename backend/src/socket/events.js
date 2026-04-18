@@ -23,7 +23,7 @@ function setupSocketEvents(io) {
       console.log("entrando na sala...", roomID);
 
       if (!room) { console.log("sala não existe"); return}
-      if (room.k !== key) { console.log("chave incorreta");  return}
+      if (room.k !== key) { console.log(`chave incorreta room.k = ${room.k} key = ${key}`);  return}
       if (room.users.length>=2) {console.log("sala cheia!"); return}
 
       room.users.push(socket.id);
