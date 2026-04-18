@@ -20,12 +20,15 @@ function setupSocketEvents(io) {
     socket.on("join_room", ({ roomID, key }) => {
       const room = rooms[roomID];
 
+      console.log("entrando na sala...", roomID);
+
       if (!room) { console.log("sala não existe"); return}
-      if (room.k !== key) return;
-      if (room.users.length>=2) return;
+      if (room.k !== key) { console.log("chave incorreta");  return}
+      if (room.users.length>=2) {console.log("sala cheia!"); return}
 
       room.users.push(socket.id);
       socket.join(roomID);
+      console.log("user adicionado a sala ", socket.id);
 
       console.log("Entrou na sala:", roomID);
       console.log("usuarios: ", room.users);
