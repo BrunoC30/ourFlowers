@@ -22,7 +22,7 @@ function setupSocketEvents(io) {
 
       if (!room) { console.log("sala não existe"); return}
       if (room.k !== key) return;
-      if (room.users.length===2) return;
+      if (room.users.length>=2) return;
 
       room.users.push(socket.id);
       socket.join(roomID);
