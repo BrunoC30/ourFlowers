@@ -100,5 +100,5 @@ function gerarQRcode(){
     
     let urlAtual = window.location.href +`?roomID=${roomID}&key=${key}`
 
-    img.src=`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(urlAtual)};`
+    img.src=`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(urlAtual)}`
 }
