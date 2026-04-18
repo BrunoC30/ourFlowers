@@ -52,6 +52,7 @@ btaoSair.addEventListener("click",()=>{
 
 flower.addEventListener("click",()=>{
     socket.emit("flower_touched",{roomID})
+    apertar();
     console.log("rosa tocada!");
 })
 
@@ -84,6 +85,13 @@ function animarRosa() {
   void flower.offsetWidth; // força reflow (hack mágico)
 
   flower.classList.add("rose-animate");
+}
+
+function apertar(){
+
+    flower.classList.remove("encolher");
+    void flower.offsetWidth;
+    flower.classList.add("encolher");
 }
 
 function efeitoPalavras(){
