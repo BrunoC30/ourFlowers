@@ -3,7 +3,7 @@ const { rooms } = require('./roomManager');
 function setupSocketEvents(io) {
   io.on("connection", (socket) => {
     console.log("backend conectado ", socket.id);
-
+     console.log("todas as rooms: ", rooms);
 
     //!!!! criar sala
     socket.on("create_room",({ roomID , key })=>{
@@ -13,7 +13,7 @@ function setupSocketEvents(io) {
             k: key,
             users: []
         }
-        console.log("todas as rooms: ", rooms);
+      
     })
 
     //!!!! entrar na sala
